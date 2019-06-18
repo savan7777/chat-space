@@ -1,0 +1,131 @@
+html
+  color: #000
+  background: #FFF
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td
+  margin: 0
+  padding: 0
+
+*
+  box-sizing: border-box
+
+.flash-box
+  color: white
+  font-size: 1rem
+  font-weight: lighter
+  text-align: center
+  width: 100vw
+  .notice
+    background-color: #38aef0
+
+head
+  display: none
+
+a
+  text-decoration: none
+
+div
+  display: block
+
+.chat-side
+  width: 300px
+  color: white
+  float: left
+  a
+    color: white
+  .side-header
+    background-color: #253141
+    height: 100px
+    display: flex
+    align-items: center
+    padding: 0 20px
+  .side-header__box
+    display: flex
+    justify-content: space-between
+    width: 100%
+    font-weight: bold
+  .side-header__box__menu li
+    margin-left: 0.3rem
+    display: inline
+  .groups
+    height: calc(100vh - 100px)
+    background-color: #2f3e51
+    padding: 20px 20px 0
+  a
+    color: white
+  .groups
+    .group
+      margin-bottom: 40px
+    .group__group-name
+      font-size: 15px
+      margin-bottom: 5px
+    .group__latest-message
+      font-size: 11px
+
+.chat-main
+  width: calc(100% - 300px)
+  float: left
+  .main-header
+    height: 100px
+    padding: 0 40px
+    display: flex
+    justify-content: space-between
+    border-bottom: solid 1px #eee
+  .main-header__edit-btn
+    height: 40px
+    line-height: 40px
+    padding: 0 20px
+    margin-top: 30px
+    border: solid 1px #38aef0
+    position: absolute
+    right: 40px
+    color: #38aef0
+  .main-header__left-box
+    margin-top: 35px
+  .main-header__left-box__current-group
+    font-size: 20px
+    color: #333
+    margin-bottom: 15px
+  .main-header__left-box__member-list
+    display: flex
+    font-size: 12px
+    color: #999999
+  .messages
+    height: calc(100vh - 190px)
+    padding: 46px 40px
+    background-color: #fafafa
+  .form
+    height: 90px
+    padding: 20px 40px
+    background-color: #ddd
+    form
+      display: flex
+      .input-box
+        position: relative
+        width: 100%
+        
+      .input-box__image
+        font-size: 1.3rem
+        position: absolute
+        top: 10px
+        right: 10px
+        cursor: pointer
+        
+        
+      .submit-btn
+        width: 100px
+        height: 50px
+        padding: 0 30px
+        margin-left: 15px
+        background-color: #38aef0
+        color: white
+        cursor: pointer
+      .input-box__text
+        height: 50px
+        width: 100%
+        padding: 0 40px 0 10px
+        color: #434a54
+        border-style: none
+      
+      .input-box__image__file
+        display: none
