@@ -7,11 +7,11 @@
       .side-header__box
         %p.side-header__box__user-name yokoi
         %ul.side-header__box__menu
-          %li.side-header__box__menu__new-group
-            %a{:href => "/groups/new"}
-              %i.fa.fa-edit
+          %li.side-header__box__menu__new-group   
+            =link_to "groups/new" do
+              %i.fa.fa-edit 
           %li.side-header__box__menu__edit-user
-            %a{:href => "/users/710/edit"}
+            =link_to "/users/710/edit" do
               %i.fa.fa-cog
     .groups
       .group
@@ -30,10 +30,10 @@
       .main-header__edit-btn Edit
     .messages
     .form
-      %form#new_message.new_message{:method => "post"}
+      %form#new_message.new_message{method: "post"}
         .input-box
-          %input#message_content.input-box__text{:placeholder => "type a message", :type => "text"}/
-          %label.input-box__image{:for => "message_image"}
+          %input#message_content.input-box__text{placeholder: "type a message", type: "text"}/
+          %label.input-box__image{for: "message_image"}
             %i.fa.fa-image
-            %input#message_image.input-box__image__file{:type => "file"}/
-        %input.submit-btn{:type => "submit", :value => "Send"}/
+            %input#message_image.input-box__image__file{type: "file"}/
+        %input.submit-btn{type: "submit", value: "Send"}/
