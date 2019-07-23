@@ -1,4 +1,16 @@
-.form
+.wrapper
+  = render "shared/side_bar"
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group グル
+        %ul.main-header__left-box__member-list
+          Member：
+          %li.main-header__left-box__member-list__member 仮名
+      .main-header__edit-btn Edit
+    .messages
+      = render @messages
+    .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
@@ -6,6 +18,4 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-
-        .messages
-         = render @messages
+        

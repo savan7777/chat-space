@@ -1,0 +1,19 @@
+.wrapper
+  = render "shared/side_bar"
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group グル
+        %ul.main-header__left-box__member-list
+          Member：
+          %li.main-header__left-box__member-list__member 仮名
+      .main-header__edit-btn Edit
+    .messages
+    .form
+      %form#new_message.new_message{method: "post"}
+        .input-box
+          %input#message_content.input-box__text{placeholder: "type a message", type: "text"}/
+          %label.input-box__image{for: "message_image"}
+            %i.fa.fa-image
+            %input#message_image.input-box__image__file{type: "file"}/
+        %input.submit-btn{type: "submit", value: "Send"}/
