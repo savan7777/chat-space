@@ -1,0 +1,32 @@
+.form
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'form__submit'
+
+/下記が自分で作成
+
+.form
+  %form#new_message.new_message{method: "post"}
+    .input-box
+      %input#message_content.input-box__text{placeholder: "type a message", type: "text"}/
+      %label.input-box__image{for: "message_image"}
+        %i.fa.fa-image
+        %input#message_image.input-box__image__file{type: "file"}/
+    %input.submit-btn{type: "submit", value: "Send"}/
+
+    
+/改良
+
+.form
+  = form_for [@group, @message] do |f|
+    .input-box
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = .submit-btn.f.submit 'Send', class: 'form__submit'

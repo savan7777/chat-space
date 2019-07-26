@@ -14,7 +14,7 @@
     }
     &__lists {
       display: inline-block;
-      float: right;
+      /*float :right */
       .list {
         display: inline-block;
       }
@@ -27,8 +27,9 @@
 
   .groups {
     background-color: $side_blue_light;
-    height: calc(100vh - 100px);
-    padding: 0 20px;
+    height: calc(100vh - 150px);
+    padding: 0px 20px ;
+    float:left;
     .group {
       box-sizing: border-box;
       padding: 20px 0 40px;
@@ -38,8 +39,9 @@
       }
       &__message {
         color: $white;
-        font-size: $side_group_message;
+        font-size: 15px;
         margin-top: 5px;
+        margin-bottom: 40px
       }
     }
   }
