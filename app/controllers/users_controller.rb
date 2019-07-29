@@ -25,3 +25,5 @@ end
     params.require(:user).permit(:name, :email)
   end
 end
+
+
