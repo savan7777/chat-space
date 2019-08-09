@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # root to: 'home#index'
   root 'groups#index'
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:index, :edit, :update]
   resources :groups, only: [:new, :create, :edit, :update] do
     resources :messages, only: [:index, :create]
     namespace :api do
@@ -12,3 +12,5 @@ Rails.application.routes.draw do
     end
   end
 end
+
+
